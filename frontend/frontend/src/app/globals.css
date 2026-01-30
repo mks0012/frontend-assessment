@@ -1,0 +1,53 @@
+/* RESET */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f3f4f6; color: #1f2937; display: flex; justify-content: center; min-height: 100vh; padding-top: 50px; }
+
+/* LAYOUT */
+.container { width: 100%; max-width: 600px; padding: 20px; }
+.card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.center-screen { display: flex; align-items: center; justify-content: center; height: 80vh; }
+
+/* TYPOGRAPHY */
+.title { font-size: 2rem; margin-bottom: 20px; color: #111827; }
+.question-text { font-size: 1.25rem; font-weight: 600; margin-bottom: 25px; color: #374151; }
+.step-count { font-size: 0.875rem; color: #6b7280; text-align: right; margin-bottom: 10px; }
+.score { font-size: 1.5rem; margin-bottom: 30px; }
+.text-center { text-align: center; }
+
+/* PROGRESS BAR */
+.progress-bg { width: 100%; height: 8px; background-color: #e5e7eb; border-radius: 4px; overflow: hidden; margin-bottom: 20px; }
+.progress-fill { height: 100%; background-color: #2563eb; transition: width 0.3s ease; }
+
+/* BUTTONS */
+.options-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px; }
+.option-btn { width: 100%; padding: 15px; text-align: left; border: 2px solid #e5e7eb; border-radius: 8px; background: white; font-size: 1rem; cursor: pointer; transition: all 0.2s; }
+.option-btn:hover:not(:disabled) { border-color: #3b82f6; background-color: #eff6ff; }
+
+/* FEEDBACK STATES */
+.option-btn.correct { background-color: #d1fae5; border-color: #10b981; color: #065f46; }
+.option-btn.incorrect { background-color: #fee2e2; border-color: #ef4444; color: #991b1b; }
+.option-btn.correct-dimmed { border-color: #10b981; opacity: 0.6; }
+.option-btn.disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* NAVIGATION */
+.nav-buttons { display: flex; justify-content: space-between; margin-top: 20px; }
+.btn { padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; font-weight: 500; background: #e5e7eb; color: #374151; font-size: 1rem; }
+.btn:hover:not(:disabled) { background: #d1d5db; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn.primary { background: #2563eb; color: white; }
+.btn.primary:hover { background: #1d4ed8; }
+.btn.success { background: #16a34a; color: white; }
+.btn.success:hover { background: #15803d; }
+
+/* KEYBOARD NAVIGATION */
+.option-btn:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+  background-color: #eff6ff;
+}
+
+.btn:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
